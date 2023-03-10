@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nacionalidade</title>
+</head>
+<body>
+    <h1>Sistema de nacionalidade</h1>
+
+    Em que país nasceu?  <input type="text" name="pais" id="ipais">
+    <input type="button" value="enviar" onclick="paises()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function paises() {
+            var txtpais = window.document.querySelector('input#ipais')
+            var res= window.document.querySelector('div#res')
+            var pais = txtpais.value
+            if (pais == 'Brasil') {
+            res.innerHTML += 'Você é brasileiro'
+            } else {
+                res.innerHTML += 'Você é estrangeiro'
+            }
+        }
+    </script>
+    
+</body>
+</html>
