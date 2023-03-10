@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(77, 77, 189);
+    font: normal 15px arial;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+section {                   
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 500px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.26);
+    
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
