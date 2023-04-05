@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var novoArray = ['carro','mota', 'barco']
+        novoArray.forEach(function(elemento, indice, array){
+            console.log(elemento, indice)
+        })
+        novoArray.push('comboio')
+        console.log(novoArray)
+        var matriz = new Array();
+        var elemento1 = new Array(3)
+        var elemento2 = new Array(3)
+        var elemento3 = new Array(3)
+
+        elemento1[0] = 4
+        elemento1[1] = 7
+        elemento1[2] = 2
+
+        elemento2[0] = 1
+        elemento2[1] = 4
+        elemento2[2] = 3
+
+        elemento2[0] = 8
+        elemento2[1] = 9
+        elemento2[2] = 9
+
+        matriz[0] = elemento1
+        matriz[1] = elemento2
+        matriz[2] = elemento3
+    </script>
+</body>
+</html>

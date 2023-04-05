@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex002 js</title>
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            width: 200px;
+            margin-left: 20px;
+        }
+
+        button {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculadora de somas javascript</h1>
+
+    <div>
+        <label for="inum1">Primeiro número:</label>
+        <input type="number" name="num1" id="inum1" required>
+        <label for="inum2">Segundo número:</label>
+        <input type="number" name="num2" id="inum2" required>
+        <p>Resultado</p>
+        <input type="number" name="res" id="ires">
+        <button type="submit" onclick="clicarSoma()">Soma</button>
+    </div>
+
+    <script>
+            const num1 = Number(document.getElementById('#inum1').value);
+            const num2 = Number(document.getElementById('#inum2')).value;
+            const res = num1 + num2;
+            const resul = Number(document.getElementById('#res'))
+
+         function clicarSoma() {
+           let resultado = document.getElementById("#res")
+           alert(resultado)
+            
+        
+
+           
+        }
+    </script>
+</body>
+</html>
