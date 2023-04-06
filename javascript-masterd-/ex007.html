@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wx007</title>
+</head>
+<body>
+    <input type="text" id="campo1">
+    <input type="text" id="campo2">
+    <input type="submit" value="Comparar" onclick="compararNum()">
+
+<script>
+    function compararNum() {
+        var var1 = +document.getElementById('campo1').value;
+        var var2 = document.getElementById('campo2').value;
+
+        if (var1 > var2) {
+            alert(`O valor mais alto é ${var1}`);
+        
+        } else if (var1 < var2) {
+            alert(`O valor mais alto é ${var2}`)
+        }else {
+            alert('Os valores são iguais!')
+        }
+    }
+</script>
+</body>
+</html>
