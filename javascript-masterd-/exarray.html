@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array</title>
+</head>
+<body>
+    <input type="text" name="texto" id="texto"> <br>
+    <input type="button" value="Inserir texto" onclick="inserirTexto()">
+    <input type="button" value="Mostrar texto" onclick="mostrarTexto()">
+    
+    <script text="javascript">
+        var meuArray = []
+        
+       
+        function inserirTexto() {
+            var cTexto = document.getElementById('texto').value
+            if(cTexto != '') {
+                meuArray += cTexto + ' '
+            } else {
+                alert('Digite algo!')
+            }
+        }
+
+        function mostrarTexto() {
+            alert(meuArray)
+        }
+    </script>
+</body>
+</html>

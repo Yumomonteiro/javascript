@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 007 master D</title>
+</head>
+<body>
+
+    Signo: <input type="text" name="campo1" id="campo1">
+    <input type="submit" value="Ver a sorte" onclick="compararNum()">
+
+    <script>
+        function compararNum() {
+            switch (document.getElementById('campo1').value) {
+
+                case 'capricórnio' :
+                    alert('saúde e negócios são a sua praia esta semana!');
+                break;
+
+                case 'leão' :
+                    alert('Uma oportunidade dificíl de recusar aparecerá no seu local de trabalho!');
+                break
+
+                case 'caranguejo' :
+                    alert('Cuide um pouco melhor de si, ou vai ficar doente neste inverno');
+                break
+
+                case 'balança' :
+                    alert('Tudo bem! Continue assim!');
+                break
+
+                case 'touro' :
+                    alert('Tem muito trabalho, tire umas férias. A sua saúde vai agradecer');
+                break
+
+                default:
+                    alert('Não temos esse signo do zodíaco, tente outro')
+                
+
+            }
+        }
+    </script>
+</body>
+</html>

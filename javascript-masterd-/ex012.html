@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio master d</title>
+</head>
+<body>
+    <input type="text" name="texto" id="texto">
+    <input type="button" value="Adicionar" onclick="adicionarTexto()">
+    <input type="button" value="Apagar" onclick="apagarTexto()">
+
+
+
+    <script>
+
+        let items = [] ;
+        function adicionarTexto() {
+            let valor = document.getElementById('texto').value;
+            items.push(valor);
+            console.log(items.join(' '));
+        } 
+
+        function apagarTexto(){
+            items = [];
+            console.log('string reiniciada')
+        }
+
+
+    </script>
+</body>
+</html>

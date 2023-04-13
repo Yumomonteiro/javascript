@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex009 master D </title>
+</head>
+<body>
+
+    <form name="Fselect">
+        Seleccione as marcas de carro que gosta<br/>
+        <select name="carros" multiple="multiple">
+        <option>Audi</option>
+        <option>Seat</option>
+        <option>Kia</option>
+        <option>Ferrari</option>
+        <option>Fiat</option>
+        </select>
+        <br/>
+        <input type="button" value="Nº de selecionados" onclick =
+        "quantos(document.Fselect.carros)" />
+    </form>
+
+
+
+    <script>
+        function quantos(objSelect) {
+            var ns = 0;
+            for (var i = 0; i < objSelect.options.length; i++) {
+                if (objSelect.options[i].selected)
+                ns++;
+            }
+            alert('selecionados : ' + ns);
+        }
+
+    </script>
+</body>
+</html>
