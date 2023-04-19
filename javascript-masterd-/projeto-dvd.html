@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lOCADORA DE DVD</title>
+</head>
+<body>
+    <h1>Locadora de DVDS</h1>
+    <button onclick="alugarDvd()">Alugar</button>
+    <button onclick="devolverDvd()">Devolver</button>
+    <button onclick="trackingDvd()">Tracking</button>
+
+    <script text="javascript">
+        let filme = {
+            Título: '007-Missão impossivel',
+            ano: 2015,
+            Duração: '2 Horas',
+            Preço: '2,99€',
+            alugado:'',
+            ultimo_cliente:' Yuri Monteiro '
+        }
+        function alugarDvd() {
+            filme.alugado = 'Filme alugado com Sucesso!'
+            console.log(filme.alugado)
+        }
+        function devolverDvd() {
+            filme.alugado = 'Filme devolvido com sucesso! volte sempre !'
+            console.log(filme.alugado)
+        }
+
+        function trackingDvd() {
+            if (filme.alugado == 'Filme alugado com Sucesso!') {
+                console.log(`Filme alugado para o cliente ${filme.ultimo_cliente}`)
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form js</title>
+</head>
+<body>
+   <form name="teste" method="post">
+
+    texto 1 <input type="text" name="texto1" id="itexto1">
+    texto 2 <input type="text" name="texto2" id="itexto2">
+    <input type="button" value="Validar" onclick="validar()">
+
+
+   </form> 
+
+
+   <script>
+    function validar() {
+        if((teste.texto1.value == '') || (teste.texto2.value == '')) {
+            alert('Um dos campos está incompleto')
+        } else {
+            alert('Tudo ok!')
+        }
+    }
+   </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acerte se for capaz</title>
+</head>
+<body>
+    <h1>Chute um número entre 0 e 20</h1>
+    <input type="number" name="num" id="num"> <br>
+    <input type="button" value="Go" onclick="chutarNumero()"> <br>
+    Resultado : <br> <input type="text" name="" id="res" disabled>
+
+
+    <script>
+       var num = parseInt(document.getElementById('num')).value
+       var NumAleatorio =  Math.floor(Math.random() * 20) + 1
+       console.log(NumAleatorio)
+       function chutarNumero() {
+        if (num >= 0 && num <= 20) {
+            if(num.value == NumAleatorio) {
+                document.getElementById('res').value = 'Você acertou!'
+            } else {
+                document.getElementById('res').value = 'você errou, tente novamente'
+       
+            }  
+        } else {
+            alert('digite um número entre 0 e 20')
+        }
+       }
+    </script>
+</body>
+</html>
