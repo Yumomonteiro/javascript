@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox JS</title>
+</head>
+<body>
+    <form name="teste" method="post">
+        Nome: <input type="text" name="nome" id="inome" size="20"> <br>
+        ... outros dados do formulário ... <br>
+        <input type="checkbox" name="aceite" id="iaceite"> Aceito os termos e condições <br>
+        <input type="button" value="Enviar" onclick="validar(this.form)">
+    </form>
+
+    <script>
+        function validar(form) {
+            if (form.aceite.checked == false) {
+                alert('Deve aceitar os termos e condições')
+                form.aceite.focus()
+                return true
+            }
+
+            alert('Aceitou os termos e condições!')
+        }
+    </script>
+</body>
+</html>
