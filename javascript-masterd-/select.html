@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select</title>
+</head>
+<body>
+    <form action="" name="teste" method="post">
+        <select name="paises" id="" onchange="habilitarSelect(this.form)">
+            <option value="">Selecione um país</option>
+           <option value="portugal">Portugal</option>
+           <option value="espanha">Espanha</option>
+           <option value="franca">França</option>
+           <option value="alemanha">Alemanha</option>
+        </select>
+        <select name="idioma" id="" disabled>
+            <option value="">Idioma</option>
+            <option value="Portugues">Português</option>
+            <option value="espanhol">Espanhol</option>
+            <option value="frances">Francês</option>
+            <option value="alemao">Alemão</option>
+        </select>
+    </form>
+
+    <script type="text/javascript">
+        function habilitarSelect(form) {
+            if (form.paises[0].select == true) {
+                form.idioma.disabled = true
+            } else {
+                form.idioma.disabled = false
+            }
+        }
+    </script>
+</body>
+</html>

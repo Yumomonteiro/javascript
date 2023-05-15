@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="antigo-style.css" id="estilo">
+    <title>Css e JS</title>
+</head>
+<body>
+    <div id="cabecalho">Sou o cabeçalho!</div>
+    <div id="corpo">Corpo da Web</div>
+
+    <input type="button" value="Antigo" onclick="mEstilo('antigo-style.css')">
+    <input type="button" value="Novo" onclick="cEstilo('novo.css')">
+
+    <script>
+        function mEstilo(estilo) {
+            document.getElementById('estilo').href = estilo;
+        }
+        function cEstilo(estilo) {
+            document.getElementById('estilo').href = estilo;
+        }
+    </script>
+</body>
+</html>

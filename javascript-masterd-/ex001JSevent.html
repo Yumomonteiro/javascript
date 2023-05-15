@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener</title>
+</head>
+<body>
+    <input type="text" name="nome" id="nome">
+    Deseja que seus dados sejam protejidos por uma senha?<input type="checkbox" name="" id="checkbox" onclick="">
+    <script>
+        let nome = document.getElementById('nome')
+        let dados_protect = document.getElementById('checkbox')
+
+        dados_protect.addEventListener('click', function() {
+            if(dados_protect.checked) {
+                nome.addEventListener('click', function() {
+                    alert('Senha protegida com sucesso!')
+                })
+            } else {
+                nome.removeEventListener('click')
+            }
+        })
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar tamanho de tela JS</title>
+</head>
+<body>
+    <input type="button" value="Abrir" onclick="abrir()">
+    <input type="button" value="Alterar Tamanho" onclick="mudarTamanho()">
+
+    <script>
+
+       
+
+        function mudarTamanho() {
+            janela.resizeTo(345,200)
+        }
+
+        function abrir() {
+            janela = window.open("","", "widht=100, height=100")
+        }
+    </script>
+</body>
+</html>

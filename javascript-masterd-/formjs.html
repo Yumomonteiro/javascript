@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <div style="text-align: start; padding: 10px;">
+        Digite seu nome: <input type="text" name="nome" id="nome" required onchange="validarNome()"> <br> <br>
+        Email : <input type="email" name="email" id="email" required onchange="validarEmail()"> <br> <br>
+        Password : <input type="password" name="senha" id="senha" required onchange="validarSenha()">
+    </div>
+
+    <script>
+        function validarNome() {
+            let nome = document.getElementById('nome')
+            if (nome.value.length > 4 && nome.value.length < 15){
+                nome = document.getElementById('nome').style.border = '3px solid green'
+            }else {
+                nome = document.getElementById('nome').style.border = '3px solid red'
+            }
+            
+        }
+
+        function validarEmail() {
+            let emailInput = document.getElementById('email') ;
+            const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+            if (!emailRegex.test(emailInput.value)) {
+                emailInput = document.getElementById('email').style.border = '3px solid red'
+            } else {
+                emailInput = document.getElementById('email').style.border = '3px solid green'
+
+            }
+        }
+
+        function validarSenha() {
+            let passwordInput = document.getElementById('senha')
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/
+
+            if (!passwordRegex.test(passwordInput.value)) {
+                passwordInput = document.getElementById('senha').style.border = '3px solid red'
+
+            } else {
+                passwordInput = document.getElementById('senha').style.border = '3px solid green'
+            }
+        }
+
+    </script>
+</body>
+</html>

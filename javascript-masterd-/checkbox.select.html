@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="py">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +7,47 @@
     <title>Select</title>
 </head>
 <body>
-    Selecione os modelos favoritos de carros
+    <form action="" name="teste" method="post">
+        Selecione os modelos favoritos de carros : <br>
+        <input type="checkbox" name="modelo1" id="" value="Ferrari" onchange="if(this.checked){inserir(this.value);}else{eliminar(this.value)}"> Ferrari <br>
+        <input type="checkbox" name="modelo2" id="" value="Seat" onchange="if(this.checked){inserir(this.value);}else {eliminar(this.value)}"> Seat <br>
+        <input type="checkbox" name="modelo3" id="" value="Porshe" onchange="if(this.checked){inserir(this.value)}else {eliminar(this.value)}"> Porshe <br>
+        <input type="checkbox" name="modelo4" id="" value="Audi" onchange="if(this.checked){inserir(this,value)}else{eliminar(this.value)}"> Audi <br>
+        Qual é mesmo o favorito? <br>
+        <select name="favorito" id="favorito">
+            <option value="">Selecione o  favorito</option>
+        </select>
+
+
+    </form>
+
+    <script type="text/javascript">
+        function inserir(modelo){
+            opt = newOption(modelo, modelo)
+            teste.favorito.options[teste.favorito.options.length] = opt
+        }
+
+        function eliminar(modelo) {
+            for (i = 0; i < teste.favorito.options.length; i++) {
+                if (teste.favorito.options[i].text == modelo) {
+                    teste.favorito.options[i] = null;
+                }
+            }
+        }
+
+        function newOption(modelo, modelo) {
+
+            //criar um object Option
+
+            let opt = document.createElement('option');
+
+            //Assignar texto e valor 
+
+            opt.text = modelo
+            opt.value = modelo
+
+            return opt
+        }
+    </script>
 </body>
 </html>

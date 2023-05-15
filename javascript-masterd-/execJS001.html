@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio css e javascript</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            margin-top: 40px;
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            width: 500px;
+            height: 500px;
+            
+        }
+
+        .box {
+            border: 1px solid black;
+            width: 160px;
+            height: 160px;
+            margin: 0px 2px;
+            
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+
+    <script>
+        let box = document.querySelectorAll('.box')
+        //criar evento para mudar a cor de fundo quando passar o mouse
+        box.forEach((item) => {
+            item.addEventListener('mouseover', () => {
+                if(item.style.backgroundColor = )
+    </script>
+</body>
+</html>

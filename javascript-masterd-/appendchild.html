@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appendchild</title>
+</head>
+<body>
+    <div style="background-color: #cccccc;">
+        <p id="p1">Linha de texto de documento :  </p>
+    </div> <br>
+    <input type="button" value="Adicionar!" name="env" onclick="adicionarTexto()">
+    
+
+    <script>
+        function adicionarTexto() {
+            var variavel = document.createTextNode('Texto com createTextNode, ')
+            var paragrafo = document.getElementById('p1')
+            paragrafo.appendChild(variavel)
+        }
+    </script>
+</body>
+</html>

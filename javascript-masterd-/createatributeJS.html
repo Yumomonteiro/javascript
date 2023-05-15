@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create atribute</title>
+</head>
+<body onload="criarAtributo()">
+    <div id="elemento">
+        conteudo do elemento
+    </div>
+
+
+    <script>
+        function criarAtributo() { 
+            var elemento = document.getElementById("elemento");
+            var atributo = document.createAttribute("meuAtributo");
+            atributo.nodeValue = 'valor do novo atributo';
+            elemento.setAttributeNode(atributo);
+            alert(elemento.getAttribute('meuAtributo'))
+        }
+    </script>
+</body>
+</html>

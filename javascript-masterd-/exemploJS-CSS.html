@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="2.css">
+    <title>Exemplo css com javascript</title>
+</head>
+<body>
+    <div id="caixa-texto">  
+        Dom Quixote de la Mancha (Don Quijote de la Mancha em castelhano) é
+        um livro escrito pelo espanhol <a href="#"onmouseover="mostrar('Miguel de Cervantes Saavedra foi um romancista, dramaturgo e poeta castelhano.',this.offsetTop,this.offsetLeft)"onmouseout="ocultar()">Miguel de Cervantes (1547-1616).</a> </br>
+        O título e ortografia originais eram El ingenioso hidalgo Don
+        Quixote de La Mancha, com sua primeira edição publicada  
+        em <a href="#" onmouseover="mostrar('Madrid é a capital e a maior cidade da Espanha.',this.offsetTop,this.offsetLeft)"onmouseout="ocultar()">Madrid</a>, no ano de 1605. </br>
+        É composto por 126 capítulos, divididos em duas partes: a primeira
+        surgida em 1605 e a outra em 1615. </br>
+        A coroa espanhola patrocinou uma edição revisada em quatro volumes
+        a cargo de Joaquín Ibarra.  
+        Iniciada em 1777 concluiu-se em 1780 com tiragem inicial de 1 600
+        exemplares. </br>
+        <span id="fonte-wiki">- fonte: Wikipedia</span>
+        <div id="caixa">&nbsp;</div>
+        </div>
+
+        <script>
+            function mostrar(valor, cima, esquerda) {
+                // inserir o texto indicando na caixa
+
+                document.getElementById('caixa').innerHTML = valor;
+
+                // posicionar a caixa logo abaixo do link
+
+                document.getElementById('caixa').style.top = cima + 19;
+                document.getElementById('caixa').style.left = esquerda;
+
+                // tornar caixa visivel 
+
+                document.getElementById('caixa').style.visibility = 'visible';
+
+            }
+
+            function ocultar() {
+                //esconder a caixa , tornando-a invisível
+
+                document.getElementById('caixa').style.visibility = 'hidden'
+            }
+        </script>
+</body>
+</html>
