@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery exercícios</title>
+</head>
+<body>
+    <div id="div-change" style="background-color: aqua;height: 400px;width: 400px;">
+    <p id="texto-div"></p>
+    </div>  
+    <input type="button" value="Ocultar" id="btn-ocultar" onclick="ocultarDiv()">
+    <input type="button" value="aparecer" id="btn-aparecer" onclick="aparecerDiv()">
+    <input type="button" value="desvanecer" id="btn-desvanecer" onclick="desvanecerDiv()">
+    <input type="button" value="colocar em negrito" id="btn-negrito" onclick="negritoDiv()">
+    <input type="button" value="Encolher" id="btn-encolher" onclick="encolherDiv()">
+    <input type="button" value="Tamanho inicial" id="btn-reset" onclick="resetDiv()">
+    <input type="button" value="remover negrito" id="btn-remove-negrito" onclick="removerNegritoDiv()">
+    <input type="text" name="texto" id="texto">
+    <input type="button" value="Inserir" onclick="inserirTexto()">
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function ocultarDiv(){
+            let ocultar = document.getElementById('div-change')
+            ocultar.style.display = "none"
+        }
+        function aparecerDiv() {
+            let aparecer = document.getElementById('div-change')
+            aparecer.style.display = "block"
+        }
+        function desvanecerDiv() {
+            let desvanecer = document.getElementById('div-change')
+            desvanecer.style.opacity = "0.3"
+        }
+        function negritoDiv() {
+            let negrito = document.getElementById('div-change')
+            negrito.style.border ='3px solid black'
+        }
+        function encolherDiv() {
+            let encolher = document.getElementById('div-change')
+            encolher.style.width = "200px"
+            encolher.style.height = "200px"
+            encolher.style.backgroundColor = "red"
+        }
+        function resetDiv() {
+            let reset = document.getElementById('div-change')
+            reset.style.width = "400px"
+            reset.style.height = "400px"
+            reset.style.backgroundColor = "aqua"
+        }
+        function removerNegritoDiv() {
+            let removeNegrito = document.getElementById('div-change')
+            removeNegrito.style.border = "none"
+        }
+        function inserirTexto() {
+            let texto = document.getElementById('texto').value;
+            let paragrafotexto = document.getElementById('texto-div')
+            paragrafotexto.innerHTML = texto
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API da nasa</title>
+</head>
+<body>
+    <div  id="resultado">
+        <div id="image">
+            <p id="copyright"></p>
+            <h1 id="tittle"></h1>
+            <p id="explanation"></p>
+        </div>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+        $.ajax({
+            url: "https://api.nasa.gov/planetary/apod?api_key=9sGUAnupZvNZq8lw4mWJMzDZFmKQubCEreDfeQzX", 
+            success: function(whatyougot) {
+                document.getElementById("image").innerHTML = "<img src='"+ whatyougot.url+"'/>";
+            }
+        })
+    </script>
+
+</body>
+</html>

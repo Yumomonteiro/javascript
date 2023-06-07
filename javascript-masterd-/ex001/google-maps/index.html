@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Bibliotecas google</title>
+</head>
+<body onload="carregarMapa()">
+    <div id="map"></div>
+    <div class="" id="mapa" style="width: 400px; height: 300px; position: relative;">
+
+    </div>
+
+    <script type="text/JavaScript"src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJ4UYojA3LduldgOlizCQJjjpNCjHkvn4&callback=myMap"></script>
+
+
+    <script>
+        
+        function carregarMapa() {
+            var ponto = new google.maps.LatLng(38.733572717953415, -
+            9.141140002274987);
+            /* criar as opções do mapa */
+            var opcoes = {
+            zoom: 12,
+            center: ponto,
+            mapTypeId: google.maps.MapTypeId.ROADMAP};
+            /* criar o mapa */
+            var m = new google.maps.Map(document.getElementById("mapa"),opcoes); 
+            var marca = new google.maps.Marker({
+                position: ponto,
+                map: m,
+                title: "MasterD"
+            });
+         }
+        
+    </script>
+</body>
+</html>
