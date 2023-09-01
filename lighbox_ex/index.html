@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Lightbox</title>
+    <link rel="stylesheet" href="lightbox2-2.11.4/dist/css/lightbox.min.css">
+</head>
+<body>
+    <h1>Exemplo de Lightbox</h1>
+
+    <div class="container">
+        <a href="images/image1.jpg" data-lightbox="minha-galeria">
+            <img src="images/image1.jpg" alt="Imagem 1">
+        </a>
+
+        <a href="images/image2.jpg" data-lightbox="minha-galeria">
+            <img src="images/image2.jpg" alt="Imagem 2">
+        </a>
+
+        <a href="images/image3.jpg" data-lightbox="minha-galeria">
+            <img src="images/image3.jpg" alt="Imagem 3">
+        </a>
+    </div>
+
+    <script src="lightbox2-2.11.4/dist/js/lightbox-plus-jquery.js"></script>
+    <script>
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+    </script>
+</body>
+</html>

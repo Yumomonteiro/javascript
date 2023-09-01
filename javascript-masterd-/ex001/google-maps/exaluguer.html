@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aluguer airbnb</title>
+    <link rel="stylesheet" href="styyle.css">
+</head>
+<body>
+    <h1>Calcular despesas de viagem</h1>
+    <?php
+    incluide 'calcular.php';
+    ?>
+    <div class="container">
+        <form action="calcular.php" method="post">
+            <div>
+                <select name="hoteis" id="select-hoteis">
+                    <option value="" disabled selected>Selecione um hotel</option>
+                    <option value="português">Copacabana Palace</option>
+                    <option value="Inglês">Trip lisboa</option>
+                    <option value="françês">Ibis frança</option>
+                </select>
+                <input type="text" name="edioma" id="input-edioma" disabled placeholder="Lingua falada" readonly>
+            </div>
+            <div class="div-center">
+                <p>Data de chegada:</p>
+                <input type="date" name="data-chegada" id="data-chegada" placeholder="dd/mm/aaaa">
+                <p>Data de partida:</p>
+                <input type="date" name="data-partida" id="data-partida"> <br>
+                <input type="button" value="Calcular" onclick="calcularDespesas()" id="btn-calcular">
+                <p id="preço-total">Preço total: 0 €.</p>
+            </div>
+
+        </form>
+    </div>
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+       var hoteis = document.getElementById('select-hoteis');
+       var edioma = document.getElementById('input-edioma');
+
+       hoteis.addEventListener('change', function(){
+        
+        var hotelSelecionado = hoteis.value
+
+        if(hotelSelecionado === 'português'){
+            edioma.value = 'Português';
+        }else if(hotelSelecionado === 'Inglês'){
+            edioma.value = 'Inglês';
+        }else if(hotelSelecionado === 'françês'){
+            edioma.value = 'Françês';
+        }
+        })
+
+
+        $(document).ready(function(){
+            $('#select-hoteis').change(function() {
+                var hotelId = $(this).val();
+                var departureDate = $('#data-chegada').val();
+                var arrivalDate = $('#data-partida').val();
+
+                $.ajax({
+                    url: 'calcular.php',
+                    type: 'POST',
+                    data: {hotelId: hotelId, departureDate: departureDate, arrivalDate:arrivalDate},
+                    success: function(response) {
+                        $('#preco-total').text(response);
+                    }
+                })
+            })
+        })
+    </script>
+
+
+</body>
+</html>

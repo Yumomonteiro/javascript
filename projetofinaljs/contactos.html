@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body style="background-color: black;">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../images/logo2-png.png" width="150px" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" href="contactos.html">Contactos</a>
+                  <a class="nav-link" href="servicos.html">serviços</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <form action="#" method="post" class="container" id="myform" style="background-color: white">
+            <p>Fale conosco</p>
+            <div class="boxform">
+                <label for="first_name">Primeiro nome</label>
+                <input type="text" name="ifirstname" id="first_name" required>
+            </div>
+            <div class="boxform">
+                <label for="apelido_form">Apelido</label>
+                <input type="text" name="iapelido_form" id="apelido_form" required>
+            </div>
+            <div class="boxform">
+                <label for="email_form">Email</label>
+                <input type="email" name="iemail" id="email_form" placeholder=" seuemail@gmail.com" required onfocus="verificarEmail()">
+            </div>
+            <div class="boxform">
+                <label for="telemovel_form">Telemovel</label>
+                <input type="number" name="telemovel" id="telemovel_form" placeholder=" 123456789"  min="9"  onfocus="verificarTelemovel()">
+                </div>
+            <div class="boxform">
+                <label for="box_mensagem">Mensagem</label>
+                <textarea name="imensagem" id="box_mensagem" cols="30" rows="8" placeholder="Digite sua mensagem!" required></textarea>
+            </div>
+            <div class="boxbtn">
+                <button type="submit">Enviar mensagem</button>
+                <button type="reset">Resetar dados</button>
+            </div>
+        </form>
+        <div class="btnmap">
+            <a href="https://www.google.com/maps/place/Master+D+Lisboa+-+Cursos+e+Forma%C3%A7%C3%A3o/@38.7335602,-9.1437149,17z/data=!3m1!4b1!4m6!3m5!1s0xd19339f5c78b77b:0xca44b80af51c2996!8m2!3d38.733556!4d-9.14114!16s%2Fg%2F11c60jkk83?entry=ttu" target="_blank">
+                <button>
+                    Onde encontrar nossa loja? clique aqui, ou veja o mapa abaixo!
+                </button>
+            </a>
+        </div>
+    </main>
+    <div class="maps">
+        <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=1000&amp;height=400&amp;hl=en&amp;q=masterd&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://gachanox.io/">Gacha Nox APK</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:400px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:400px;}.gmap_iframe {height:400px!important;}</style></div>
+    </div>
+    <footer>
+        <p><a href="https://github.com/Yumomonteiro" target="_blank">© Yumomonteiro</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>

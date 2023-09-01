@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos</title>
+    <link rel="stylesheet" href="./estilos/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="index.html"><img src="../images/logo2-png.png" width="150px" alt=""></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                  <a class="nav-link" href="contactos.html">Contactos</a>
+                  <a class="nav-link" href="servicos.html">serviços</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <main>
+        <form action="#" class="form_bg" id="myform">
+            <h1 class="tittle-white">Serviços</h1>
+            <div class="boxformblack">
+                <label for="first_name">Primeiro nome</label>
+                <input type="text" name="ifirstname" id="first_name" required>
+            </div>
+            <div class="boxformblack">
+                <label for="apelido_form">Apelido</label>
+                <input type="text" name="iapelido_form" id="apelido_form" required>
+            </div>
+            <div class="boxformblack">
+                <label for="email_form">Email</label>
+                <input type="email" name="iemail" id="email_form" placeholder=" seuemail@gmail.com" required>
+            </div>
+            <div class="boxformblack">
+                <label for="telemovel_form">Telemovel</label>
+                <input type="number" name="telemovel" id="telemovel_form" placeholder=" 123456789"  min="9"  onfocus="verificarTelemovel()">
+                </div>
+            <h2 class="tittle-white">Pedido de Orçamento</h2>
+            <div class="boxformblack">
+                <label for="viatura_form">Tipo de viatura</label>
+                <select name="iviatura" id="viatura_form" required>
+                    <option value="opt1">Carro ligeiro</option>
+                    <option value="opt2">carrinha ligeira</option>
+                    <option value="opt3">veiculo pesado</option>
+                </select>
+            </div>
+            <div class="boxformblack">
+                <label for="">Estimativa (meses)</label>
+                <input type="number" name="ideadline" id="deadline" required min="1">
+                <div class="boxformblack">
+                </div>                
+            </div>
+            <div class="boxcheckbox">
+                <label for="service_form" id="labeldif">Selecione os serviçoes que desejar:</label> <br>
+                <input type="checkbox" name="ilavagem" id="" class="checkboxitems">Lavagem
+                <input type="checkbox" name="ipolimento" id="" class="checkboxitems">Polimento
+                <input type="checkbox" name="ibatechapa" id="" class="checkboxitems">Bate-chapa
+                <input type="checkbox" name="ipintura" id="" class="checkboxitems">Pintura
+            </div>
+            <h2 class="tittle-white">Valor estimado:</h2>
+            <div class="boxformblack">
+                <input type="text" name="preco" id="preco_form" disabled>
+            </div>
+            <div class="boxbtn">
+                <button type="submit">
+                    Enviar Pedido!
+                </button>
+            </div>
+        </form>
+    </main>
+    <footer>
+        <p><a href="https://github.com/Yumomonteiro" target="_blank">© Yumomonteiro</a></p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="javascript/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+</body>
+</html>
